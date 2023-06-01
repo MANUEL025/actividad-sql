@@ -240,13 +240,13 @@
                 <li>Id</li>
               </ul>
               <br>
-              <img src="images/esta.jpg" alt="">
+              <img src="images/ejer6.PNG" alt="">
               <br>
               <br>
               <br>
 
               <code>
-                        Esta complicada la cosa
+                SELECT countries.name AS Pais, COUNT(users.id) AS total_usuarios FROM countries JOIN departaments ON countries.id = departaments.id_countries JOIN users ON departaments.id = users.deparments_id GROUP BY countries.name ORDER BY total_usuarios DESC LIMIT 1;
                                   </code>
             </div>
           </div>
@@ -395,7 +395,7 @@
                 <li>Nombres</li>
                 <li>Apellidos</li>
                 <li>Nombre capital</li>
-                <h1>No existe la comumna edades en la tabla usuarios</h1>
+                <h1>Error añ tener las fechas desordenadas </h1>
               </ul>
               <br>
               <img src="images/tecnico1.jpg" width="850" height="400" alt="">
@@ -423,13 +423,13 @@
 
               </ul>
               <br>
-              <img src="images/fatal-error.jpg" width="850" height="400" alt="">
+              <img src="images/ejer13.PNG" width="850" height="400" alt="">
               <br>
               <br>
               <br>
 
               <code>
-
+                SELECT name, address, phone FROM schools WHERE phone LIKE '%7%';
                   </code>
             </div>
           </div>
@@ -441,12 +441,11 @@
           <div class="card">
             <div class="card-body" style="background-image: url(images/fondo1.jpg);">
               <h2 class="titulo2">Ejercicio #14</h2>
-              <p class="parrafo1">Listado de usuarios y a que departamento pertenecen,registrados en la base de datos </p>
+              <p class="parrafo1">Listado de usuarios que no esten asociados a ningun departamento </p>
               <ul class="ul1">
                 <li>Nombres</li>
                 <li>Apellidos</li>
-                <li>Correo</li>
-                <li>Nombre del departamento</li>
+                
               </ul>
               <br>
               <img src="images/tecnico1.jpg" width="850" height="400" alt="">
@@ -455,8 +454,8 @@
               <br>
 
               <code>
-                                                      SELECT users.names, users.lastnames, countries.name as country FROM users INNER JOIN countries WHERE users.country_id = countries.id;
-                                                  </code>
+                SELECT name, last_name FROM users WHERE users.deparments_id IS NULL; 
+                 </code>
             </div>
           </div>
 
@@ -467,21 +466,20 @@
           <div class="card">
             <div class="card-body" style="background-image: url(images/fondo3.jpg);">
               <h2 class="titulo2">Ejercicio #15</h2>
-              <p class="parrafo1">Listado de usuarios y a que departamento pertenecen,registrados en la base de datos </p>
+              <p class="parrafo1">Listado de usuarios que no esten asociados a ningun colegio </p>
               <ul class="ul1">
                 <li>Nombres</li>
                 <li>Apellidos</li>
-                <li>Correo</li>
-                <li>Nombre del departamento</li>
+                
               </ul>
               <br>
-              <img src="images/tecnica3.jpg" width="850" height="400" alt="">
+              <img src="images/ejer15.PNG" width="850" height="400" alt="">
               <br>
               <br>
               <br>
 
               <code>
-                                                        SELECT users.names, users.lastnames, countries.name as country FROM users INNER JOIN countries WHERE users.country_id = countries.id;
+                SELECT names, lastname FROM users WHERE schools_id IS NULL;
                                                     </code>
             </div>
           </div>
